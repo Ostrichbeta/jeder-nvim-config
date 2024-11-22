@@ -78,7 +78,7 @@ hi CocMenuSel ctermbg=249
 let g:tex_flavor = "latex"
 let g:coc_global_extensions = [
             \'coc-json',
-            \'coc-texlab',
+           "  \'coc-texlab',
             \'coc-tsserver',
             \'coc-snippets',
             \'coc-pyright'
