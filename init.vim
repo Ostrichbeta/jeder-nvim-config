@@ -59,7 +59,7 @@ set expandtab
 set mouse=nvi
 
 " Set special highlight
-set background=light
+set background=dark
 
 " Fuzzy completion
 set wildoptions+=fuzzy
@@ -78,7 +78,6 @@ hi CocMenuSel ctermbg=249
 let g:tex_flavor = "latex"
 let g:coc_global_extensions = [
             \'coc-json',
-           "  \'coc-texlab',
             \'coc-tsserver',
             \'coc-snippets',
             \'coc-pyright'
