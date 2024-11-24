@@ -22,7 +22,7 @@ for i = 1, #keys do
       opts)
 end
 -- Just the menu
-map({'t', 'n'}, '<C-A>', bmui.toggle_quick_menu, opts)
+map({'t', 'n'}, '<C-K>', bmui.toggle_quick_menu, opts)
 -- Open menu and search
 -- map({'t', 'n'}, '<C-2>', function()
 --   bmui.toggle_quick_menu()
