@@ -15,6 +15,13 @@ Plug 'honza/vim-snippets'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'j-morano/buffer_manager.nvim'
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Debug Stuff
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'mxsdev/nvim-dap-vscode-js'
+
 " Markdown Live Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
@@ -22,7 +29,7 @@ call plug#end()
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 let g:neoformat_lua_luaformat = {
 			\ 'exe': 'lua-format',
-			\ 'args': ['--indent-width=2', '--tab-width=2']
+			\ 'args': ['--indent-width=4', '--tab-width=4']
 \ }
 " let g:latexindent_opt="-m"
 " Use Tex-Fmt to format the file
@@ -91,4 +98,5 @@ source ~/.config/nvim/nvimtree.lua
 source ~/.config/nvim/lualine.lua
 source ~/.config/nvim/coc.lua
 source ~/.config/nvim/buffer_manager.lua 
-
+source ~/.config/nvim/dap.lua
+source ~/.config/nvim/treesitter.lua
