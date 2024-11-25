@@ -42,9 +42,9 @@ require("dap").configurations.typescript =
 
 -- Set key bindings
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
-vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
-vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
-vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
+vim.keymap.set('n', '<F8>', function() require('dap').step_over() end)
+vim.keymap.set('n', '<F9>', function() require('dap').step_into() end)
+vim.keymap.set('n', '<F10>', function() require('dap').step_out() end)
 vim.keymap.set('n', '<Leader>b',
                function() require('dap').toggle_breakpoint() end)
 vim.keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
@@ -64,4 +64,8 @@ end)
 vim.keymap.set('n', '<Leader>ds', function()
     local widgets = require('dap.ui.widgets')
     widgets.centered_float(widgets.scopes)
+end)
+
+vim.keymap.set('n', '<Leader>dt', function()
+    require('dap').terminate()
 end)
