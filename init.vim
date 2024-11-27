@@ -104,3 +104,4 @@ source ~/.config/nvim/coc.lua
 source ~/.config/nvim/buffer_manager.lua 
 source ~/.config/nvim/dap.lua
 source ~/.config/nvim/treesitter.lua
+source ~/.config/nvim/session-manager.lua
