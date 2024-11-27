@@ -22,6 +22,10 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'mxsdev/nvim-dap-vscode-js'
 
+" Session Manager
+Plug 'nvim-lua/plenary.nvim'
+Plug 'Shatur/neovim-session-manager'
+
 " Markdown Live Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
@@ -88,7 +92,8 @@ let g:coc_global_extensions = [
             \'coc-texlab',
             \'coc-tsserver',
             \'coc-snippets',
-            \'coc-pyright'
+            \'coc-pyright',
+            \'@yaegassy/coc-volar'
             \]
 
 " Color the line number
