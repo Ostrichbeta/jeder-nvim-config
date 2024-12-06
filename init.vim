@@ -46,6 +46,14 @@ let g:neoformat_tex_texfmt = {
             \}
 let g:neoformat_enabled_tex = ['texfmt']
 
+let g:neoformat_tex_prettierd = {
+        \ 'exe': 'prettierd',
+        \ 'args': ['--tab-width 4'],
+        \ 'stdin': 1,
+        \ 'valid_exit_codes': [0],
+        \ 'no_append': 1
+        \}
+
 " VimTeX
 filetype plugin indent on
 syntax enable

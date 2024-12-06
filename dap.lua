@@ -29,6 +29,17 @@ for _, language in ipairs(js_based_languages) do
             console = "integratedTerminal"
         }, {
             type = "pwa-node",
+            request = "launch",
+            name = "NPM Node Dev",
+            runtimeExecutable = "npm",
+            runtimeArgs = {
+              "run",
+              "dev",
+            },
+            cwd = "${workspaceFolder}",
+            console = "integratedTerminal"
+        }, {
+            type = "pwa-node",
             request = "attach",
             name = "Attach",
             processId = require'dap.utils'.pick_process,
@@ -66,6 +77,4 @@ vim.keymap.set('n', '<Leader>ds', function()
     widgets.centered_float(widgets.scopes)
 end)
 
-vim.keymap.set('n', '<Leader>dt', function()
-    require('dap').terminate()
-end)
+vim.keymap.set('n', '<Leader>dt', function() require('dap').terminate() end)
