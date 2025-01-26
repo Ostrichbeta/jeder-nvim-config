@@ -2,5 +2,6 @@
   "coc.source.buffer.enable": false,
   "coc.source.around.enable": false,
   "snippets.ultisnips.pythonPrompt": false,
-  "python.pythonPath": "/Users/ostrichb/python-nvim-activate.zsh"
+  "python.pythonPath": "/Users/ostrichb/python-nvim-activate.zsh",
+  "eslint.experimental.useFlatConfig": true
 }
