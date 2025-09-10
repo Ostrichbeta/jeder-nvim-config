@@ -26,6 +26,9 @@ Plug 'mxsdev/nvim-dap-vscode-js'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'Shatur/neovim-session-manager'
 
+" Copilot
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
+
 " Markdown Live Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
@@ -106,6 +109,10 @@ let g:coc_global_extensions = [
 
 " Color the line number
 highlight LineNr ctermfg=58 gui=NONE
+
+lua << EOF
+require("CopilotChat").setup()
+EOF
 
 source ~/.config/nvim/nvimtree.lua
 source ~/.config/nvim/lualine.lua
