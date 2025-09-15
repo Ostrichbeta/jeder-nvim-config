@@ -81,7 +81,7 @@ set expandtab
 set mouse=nvi
 
 " Set special highlight
-set background=dark
+set background=light
 
 " Fuzzy completion
 set wildoptions+=fuzzy
