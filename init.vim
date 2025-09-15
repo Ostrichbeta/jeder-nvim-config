@@ -5,7 +5,6 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'luochen1990/rainbow'
 Plug 'sbdchd/neoformat'
-Plug 'lervag/vimtex'
 
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -38,16 +37,6 @@ let g:neoformat_lua_luaformat = {
 			\ 'exe': 'lua-format',
 			\ 'args': ['--indent-width=4', '--tab-width=4']
 \ }
-" let g:latexindent_opt="-m"
-" Use Tex-Fmt to format the file
-let g:neoformat_tex_texfmt = {
-            \ 'exe': 'tex-fmt',
-            \ 'args': ['-s', '-q', '-p', '--tab 4', '--wrap 160'],
-            \ 'stdin': 1,
-            \ 'valid_exit_codes': [0],
-            \ 'no_append': 1
-            \}
-let g:neoformat_enabled_tex = ['texfmt']
 
 let g:neoformat_tex_prettierd = {
         \ 'exe': 'prettierd',
@@ -57,22 +46,6 @@ let g:neoformat_tex_prettierd = {
         \ 'no_append': 1
         \}
 
-" VimTeX
-filetype plugin indent on
-syntax enable
-let g:vimtex_view_method = 'skim'
-let g:vimtex_compiler_latexmk = { 
-        \ 'executable' : 'latexmk',
-        \ 'options' : [ 
-        \   '-xelatex',
-        \   '-file-line-error',
-        \   '-synctex=1',
-        \   '-interaction=nonstopmode',
-        \ ],
-        \}
-let g:vimtex_compiler_latexmk_engines = {
-    \ '_'                : '-xelatex',
-    \}
 " Default Tab settings
 set tabstop=4
 set shiftwidth=4
