@@ -13,7 +13,8 @@ Plug 'honza/vim-snippets'
 
 " Buffer Related
 Plug 'nvim-lua/plenary.nvim'
-Plug 'j-morano/buffer_manager.nvim'
+Plug 'wasabeef/bufferin.nvim'
+Plug 'willothy/nvim-cokeline'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -31,6 +32,12 @@ Plug 'CopilotC-Nvim/CopilotChat.nvim'
 
 " Markdown Live Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+" Fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'ibhagwan/fzf-lua'
+
+
 call plug#end()
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
@@ -114,10 +121,12 @@ lua << EOF
 require("CopilotChat").setup()
 EOF
 
+
 source ~/.config/nvim/nvimtree.lua
 source ~/.config/nvim/lualine.lua
 source ~/.config/nvim/coc.lua
-source ~/.config/nvim/buffer_manager.lua 
 source ~/.config/nvim/dap.lua
 source ~/.config/nvim/treesitter.lua
 source ~/.config/nvim/session-manager.lua
+source ~/.config/nvim/buffer.lua
+source ~/.config/nvim/fzf.lua
