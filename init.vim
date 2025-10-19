@@ -49,7 +49,7 @@ let g:neoformat_lua_luaformat = {
 " Use Tex-Fmt to format the file
 let g:neoformat_tex_texfmt = {
             \ 'exe': 'tex-fmt',
-            \ 'args': ['-s', '-q', '-p', '--tab 4', '--wrap 160'],
+            \ 'args': ['-s', '-q', '-p', '--tabsize 4', '--nowrap'],
             \ 'stdin': 1,
             \ 'valid_exit_codes': [0],
             \ 'no_append': 1
