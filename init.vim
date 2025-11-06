@@ -27,9 +27,6 @@ Plug 'mxsdev/nvim-dap-vscode-js'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'Shatur/neovim-session-manager'
 
-" Copilot
-Plug 'CopilotC-Nvim/CopilotChat.nvim'
-
 " Markdown Live Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -37,6 +34,11 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'ibhagwan/fzf-lua'
 
+
+" Avante
+Plug 'MunifTanjim/nui.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
 call plug#end()
 
@@ -92,7 +94,7 @@ set background=light
 
 " Fuzzy completion
 set wildoptions+=fuzzy
-
+            
 " Split settings
 set splitright
 set splitbelow
@@ -117,10 +119,8 @@ let g:coc_global_extensions = [
 " Color the line number
 highlight LineNr ctermfg=58 gui=NONE
 
-lua << EOF
-require("CopilotChat").setup()
-EOF
-
+" Avante Initialization
+autocmd! User avante.nvim
 
 source ~/.config/nvim/nvimtree.lua
 source ~/.config/nvim/lualine.lua
@@ -130,3 +130,4 @@ source ~/.config/nvim/treesitter.lua
 source ~/.config/nvim/session-manager.lua
 source ~/.config/nvim/buffer.lua
 source ~/.config/nvim/fzf.lua
+source ~/.config/nvim/avante.lua
