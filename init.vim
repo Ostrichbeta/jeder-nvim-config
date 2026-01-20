@@ -39,6 +39,9 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 
+" MCPHub
+Plug 'ravitemer/mcphub.nvim', { 'do': 'npm install -g mcp-hub@latest' }
+
 call plug#end()
 
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
@@ -59,6 +62,8 @@ let g:neoformat_tex_prettierd = {
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+set autoread
 
 set mouse=nvi
 
