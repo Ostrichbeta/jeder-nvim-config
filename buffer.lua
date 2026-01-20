@@ -73,7 +73,7 @@ vim.keymap.set("n", "<Leader>p", "<Plug>(cokeline-focus-prev)", {silent = true})
 vim.keymap.set("n", "<Leader>n", "<Plug>(cokeline-focus-next)", {silent = true})
 vim.keymap.set(
     "n",
-    "<leader>bd",
+    "<leader>db",
     function()
         local cbn = vim.api.nvim_get_current_buf()
         local buffers = vim.fn.getbufinfo({buflisted = true})
