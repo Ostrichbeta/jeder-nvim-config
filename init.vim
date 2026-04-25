@@ -109,3 +109,4 @@ source ~/.config/nvim/buffer.lua
 source ~/.config/nvim/fzf.lua
 source ~/.config/nvim/avante.lua
 source ~/.config/nvim/render-markdown.lua
+source ~/.config/nvim/clipboard.lua
