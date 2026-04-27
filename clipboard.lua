@@ -101,7 +101,7 @@ local function setup_ssh_osc52_clipboard()
     cache_enabled = 0,
   }
 
-  vim.opt.clipboard = "unnamedplus"
+  -- vim.opt.clipboard = "unnamedplus"
 end
 
 local function setup_local_desktop_clipboard()
