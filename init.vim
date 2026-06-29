@@ -69,13 +69,14 @@ let g:neoformat_tex_prettierd = {
         \ 'no_append': 1
         \}
 
-" VimTeX
-filetype plugin indent on
-syntax enable
 augroup json_trailing_commas
   autocmd!
   autocmd Syntax json,jsonc syntax clear jsonTrailingCommaError
 augroup END
+
+" VimTeX
+filetype plugin indent on
+syntax enable
 let g:vimtex_view_method = 'skim'
 let g:vimtex_compiler_latexmk = { 
         \ 'executable' : 'latexmk',
