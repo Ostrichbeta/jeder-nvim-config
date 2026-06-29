@@ -58,6 +58,11 @@ let g:neoformat_tex_prettierd = {
         \ 'no_append': 1
         \}
 
+augroup json_trailing_commas
+  autocmd!
+  autocmd Syntax json,jsonc syntax clear jsonTrailingCommaError
+augroup END
+
 " Default Tab settings
 set tabstop=4
 set shiftwidth=4
